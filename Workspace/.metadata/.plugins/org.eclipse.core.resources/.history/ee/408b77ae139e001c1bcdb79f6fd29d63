@@ -1,0 +1,7 @@
+package Code_Java_Package;
+
+public class BaiTapJava {
+	public static void main(String[] args) {
+		System.out.print("Hello");
+	}
+}

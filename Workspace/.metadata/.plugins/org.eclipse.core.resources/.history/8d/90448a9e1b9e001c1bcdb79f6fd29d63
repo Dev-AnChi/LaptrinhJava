@@ -1,0 +1,84 @@
+package Code_Java_Package;
+import java.util.Scanner;
+
+class NhanVien {
+	String TenNV;
+	int Tuoi;
+	String DiaChi;
+	double TienLuong;
+	int TongSoGioLam;
+	
+	NhanVien(){
+		TenNV = "";
+		Tuoi = 0;
+		DiaChi = "";
+		TienLuong = 0;
+		TongSoGioLam = 0;
+	}
+	
+	String getThongTin() {
+		String tt = "Ten : " + TenNV + "     Tuoi : " + Tuoi+ "        Dia Chi : " + DiaChi 
+					+ "     Tien luong : " + TienLuong + "     Tong so gio lam : " + TongSoGioLam;
+		return tt;
+	}
+	
+	double tinhThuong() {
+		if(TongSoGioLam >= 200) {
+			return TienLuong*20/100;
+		}
+		else if (TongSoGioLam < 100) {
+			return 0;
+		}
+		else {
+			return TienLuong*10/100;
+		}
+	}
+}
+
+interface  IQuanLy {
+	void themDS(NhanVien nv);
+	void inDS(NhanVien nv);
+}
+
+public class QuanLiNhanVien extends NhanVien implements IQuanLy{
+
+	@Override
+	public void themDS(NhanVien nv) {
+		Scanner sc= new Scanner(System.in);
+		System.out.print("Nhap ten NV : ");
+		nv.TenNV = sc.nextLine();
+		System.out.print("Nhap tuoi : ");
+		nv.Tuoi = sc.nextInt();
+		System.out.print("Nhap dia chi : ");
+		nv.DiaChi = sc.nextLine();
+		System.out.print("Nhap tien luong : ");
+		nv.TienLuong = sc.nextDouble();
+		System.out.print("Nhap tong so gio lam : ");
+		nv.TongSoGioLam = sc.nextInt();
+	}
+
+	@Override
+	public void inDS(NhanVien nv) {
+		System.out.print(nv.getThongTin());
+	}
+
+}
+
+
+public class BaiTapJava {
+	public static void main(String[] args) {
+		//Bai tap 1
+		NhanVien nv1 = new NhanVien();
+		System.out.print(nv1.getThongTin());
+//		NhanVien nv2 = new NhanVien();
+//		System.out.print(nv2.getThongTin());
+		
+		QuanLiNhanVien qlnv = new QuanLiNhanVien();
+		NhanVien[] nv = new NhanVien[6];
+		for(int i=0; i<5; i++) {
+			qlnv = new QuanLiNhanVien();
+			nv[i] = new NhanVien();
+			qlnv.themDS(nv[i]);
+		}
+	}
+}

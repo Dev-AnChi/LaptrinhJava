@@ -1,0 +1,27 @@
+package Code_Java_Package;
+
+class NhanVien {
+	String TenNV;
+	int Tuoi;
+	String DiaChi;
+	double TienLuong;
+	int TongSoGioLam;
+	
+	NhanVien(){
+		TenNV = "";
+		Tuoi = 0;
+		DiaChi = "";
+		TienLuong = 0;
+		TongSoGioLam = 0;
+	}
+	
+	String getThongTin() {
+		return TenNV;
+	}
+	
+}
+public class BaiTapJava {
+	public static void main(String[] args) {
+		System.out.print("Hello");
+	}
+}

@@ -1,0 +1,59 @@
+package Code_Java_Package;
+import java.util.Scanner;
+
+class NhanVien {
+	String TenNV;
+	int Tuoi;
+	String DiaChi;
+	double TienLuong;
+	int TongSoGioLam;
+	
+	NhanVien(){
+		TenNV = "";
+		Tuoi = 0;
+		DiaChi = "";
+		TienLuong = 0;
+		TongSoGioLam = 0;
+	}
+	
+	String getThongTin() {
+		String tt = "Ten : " + TenNV + "     Tuoi : " + Tuoi+ "        Dia Chi : " + DiaChi 
+					+ "     Tien luong : " + TienLuong + "     Tong so gio lam : " + TongSoGioLam;
+		return tt;
+	}
+	
+	double tinhThuong() {
+		if(TongSoGioLam >= 200) {
+			return TienLuong*20/100;
+		}
+		else if (TongSoGioLam < 100) {
+			return 0;
+		}
+		else {
+			return TienLuong*10/100;
+		}
+	}
+}
+
+interface IQuanLy {
+	void them(NhanVien nv) {
+		Scanner sc= new Scanner(System.in);
+		nv.TenNV = sc.nextLine();
+		nv.Tuoi = sc.nextInt();
+		nv.DiaChi = sc.nextLine();
+		nv.TienLuong = sc.nextDouble();
+		nv.TongSoGioLam = sc.nextInt();
+	}
+}
+
+public class BaiTapJava {
+	public static void main(String[] args) {
+		//Bai tap 1
+		NhanVien nv = new NhanVien();
+		System.out.print(nv.getThongTin());
+		NhanVien nv1 = new NhanVien();
+		System.out.print(nv1.getThongTin());
+		
+		
+	}
+}

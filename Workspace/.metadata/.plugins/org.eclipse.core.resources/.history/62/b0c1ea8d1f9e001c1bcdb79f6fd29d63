@@ -1,0 +1,24 @@
+package LT_Java_Bai3;
+
+abstract class SinhVienPoly{
+	String hoTen="";
+	String nganh="";
+	
+	SinhVienPoly(String ht, String ng){
+		hoTen = ht;
+		nganh = ng;
+	}
+	
+	abstract double getDiem(){
+		double diem;
+		return diem;
+	}
+	
+	
+}
+
+public class BaitapJava3 {
+	public static void main(String[] args) {
+		
+	}
+}

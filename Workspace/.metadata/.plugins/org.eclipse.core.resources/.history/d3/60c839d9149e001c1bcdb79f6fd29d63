@@ -1,0 +1,35 @@
+package Code_Java_Package;
+
+class NhanVien {
+	String TenNV;
+	int Tuoi;
+	String DiaChi;
+	double TienLuong;
+	int TongSoGioLam;
+	
+	NhanVien(){
+		TenNV = "";
+		Tuoi = 0;
+		DiaChi = "";
+		TienLuong = 0;
+		TongSoGioLam = 0;
+	}
+	
+	String getThongTin() {
+		String tt = "Ten : " + TenNV + "     Tuoi : " + Tuoi+ "        Dia Chi : " + DiaChi;
+		return tt;
+	}
+	double tinhThuong() {
+		if(TongSoGioLam >= 200) {
+			return TienLuong*20/100;
+		}
+		else if (TongSoGioLam < 100) {
+			return TienLuong*10/100;
+		}
+	}
+}
+public class BaiTapJava {
+	public static void main(String[] args) {
+		System.out.print("Hello");
+	}
+}

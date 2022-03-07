@@ -1,0 +1,17 @@
+package LT_Java_Bai3;
+
+class SinhVienPoly{
+	String hoTen;
+	String nganh;
+	
+	SinhVienPoly(String ht="", String ng=""){
+		hoTen = ht;
+		nganh = ng;
+	}
+}
+
+public class BaitapJava3 {
+	public static void main(String[] args) {
+		
+	}
+}
